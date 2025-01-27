@@ -9,6 +9,7 @@ body {
     background-image: linear-gradient(45deg, rgba(211, 3, 3), rgb(42, 78, 222), rgb(235, 247, 13), rgb(42, 177, 222));
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
+    margin: 0%;
 }
 
 @keyframes color {
@@ -33,16 +34,6 @@ h1 {
     -webkit-background-clip: text;
 }
 
-/* ---------------------------------------------------------- Maintenance Header ---------------------------------------------------*/
-
-header {
-  position: sticky;
-  top: 0; 
-  background-color: yellow;
-  z-index: 1000;
-  padding-left: 20px; 
-  padding-block: 1px;
-}
 
 /* ---------------------------------------------------------- Main Body --------------------------------------------------------------- */
 
@@ -65,15 +56,16 @@ header {
 } */
 
 
-/* ------------------------------------------------------ Parent (Logo and NavBar) ------------------------------------------------------ */
+/* ------------------------------------------------------------------- Menu ---------------------------------------------------------- */
+
 
 .Menu {
     width: 15%;
-    list-style-type: none;
-    margin: 0;
     height: 100%;
     position: fixed;
-    overflow: auto;
+    background-color: #554;
+    padding: 1%;
+    padding-right: 25px;
 }
 
 
@@ -82,20 +74,20 @@ header {
 .Logo {
     position: fixed;
     width: 15.6%;
-    padding-top: 0px;
+    padding-top: 10px;
 }
 
 img {
     width: 100%;
-    height: inherit width;
-    border-radius: 15px;
+    /* height: inherit width; */
+    /* border-radius: 15px; */
 }
-
 
 /* ------------------------------------------------------------ NavBar ------------------------------------------------------------------ */
 
 .NavBar {
-    margin-top: 300px;
+    margin-top: 180px;
+
 }
 
 ul {
@@ -127,6 +119,25 @@ li a:hover {
 li a.active {
     background-color: #04AA6D;
     color: white;
+}
+
+.dangerButton {
+    li a:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
+
+.NavBar {
+    margin-top: 180px;
+}
+
+footer {
+    padding-top: 420px;
+    text-align: center;
+    color: white;
+    transition-delay: 3ms;
 }
 
 
