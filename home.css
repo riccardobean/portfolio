@@ -6,18 +6,18 @@
 body {
     background-color: aqua;
     font-family: 'Lato', sans-serif;
-    background-image: linear-gradient(45deg, rgba(211, 3, 3), rgb(42, 78, 222), rgb(235, 247, 13), rgb(42, 177, 222));
-    background-size: 300% 300%;
-    animation: color 12s ease-in-out infinite;
+    background-image: radial-gradient(circle, rgba(211, 3, 3) 0%, rgba(42, 78, 222) 33%, rgba(235, 247, 13) 66%, rgb(28, 95, 241) 100%);
+    background-size: 2000% 2000%;
+    animation: color 20s ease-in-out infinite;
 }
 
 @keyframes color {
     0% {
-        background-position: 0 50%;
+        background-position: 0% 50%;
     }
 
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
 
     100% {
@@ -30,6 +30,7 @@ h1 {
     color: transparent;
     text-align: left;
     letter-spacing: .20em;
+    background-clip: inherit;
     -webkit-background-clip: text;
 }
 
