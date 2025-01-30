@@ -111,7 +111,7 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
 
     .loading,
     .redirecting,
@@ -135,4 +135,4 @@ body {
     .loader {
         width: 5vw;
     }
-}
+} */
