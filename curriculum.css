@@ -1,345 +1,316 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+:root {
+    --sidebar-w: 260px;
+    --accent: linear-gradient(135deg, #0ea5e9 0%, #7c3aed 50%, #ef4444 100%);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --muted: #444;
+    --glass: rgba(255, 255, 255, 0.06);
+    --radius: 14px;
+}
 
 
-/* --------------------------------------------- Body, Text, and Background Settigns --------------------------------------------------- */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+}
 
 body {
-    font-family: 'Lato', sans-serif;
-    background-image: radial-gradient(circle, rgba(211, 3, 3) 0%, rgba(42, 78, 222) 33%, rgba(235, 247, 13) 66%, rgb(28, 95, 241) 100%);
-    background-size: 2000% 2000%;
-    animation: color 20s ease-in-out infinite;
-    margin: 0%;
+    background: radial-gradient(circle at 10% 10%, #fef3c7, transparent 10%), radial-gradient(circle at 90% 90%, #dbeafe, transparent 10%), linear-gradient(120deg, #0ea5e9 0%, #7c3aed 40%, #ef4444 100%);
+    background-attachment: fixed;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
 }
-
-@keyframes color {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-h1 {
-    background: linear-gradient(179deg, red, white);
-    color: transparent;
-    text-align: left;
-    letter-spacing: .20em;
-    background-clip: inherit;
-    -webkit-background-clip: text;
-}
-
-table {
-    font-size: 1.2rem;
-}
-
-
-/* ---------------------------------------------------------- Maintenance Header ---------------------------------------------------*/
-
-header {
-    position: sticky;
-    top: 0;
-    background-color: yellow;
-    z-index: 1000;
-    padding-left: 20px;
-    padding-block: 1px;
-}
-
-
-/* ----------------------------------------------------- Parent & Main Body --------------------------------------------------------- */
-
-.Parent {
-    margin-top: 0%;
-    margin-left: 26%;
-    width: inherit;
-    display: inline-block;
-}
-
-.MainBody {
-    width: 100%;
-    height: 100%;
-    /* margin-top: 5%; */
-    font-size: 1.8em;
-}
-
-
-/* ------------------------------------------------------------------- Menu ---------------------------------------------------------- */
-
 
 .Menu {
-    width: 15%;
-    height: 100%;
     position: fixed;
-    background-color: #554;
-    padding: 1%;
-    padding-right: 25px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: var(--sidebar-w);
+    padding: 28px 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(6px);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-
-/* ------------------------------------------------------------- Logo ------------------------------------------------------------------- */
-
-.Logo {
-    position: fixed;
-    width: 15.6%;
-    padding-top: 10px;
-}
-
-img {
+.Logo img {
     width: 100%;
-    /* height: inherit width; */
-    /* border-radius: 15px; */
-}
-
-
-/* ------------------------------------------------------------ NavBar ------------------------------------------------------------------ */
-
-.NavBar {
-    margin-top: 180px;
-
-}
-
-ul {
-
-    list-style-type: none;
-    margin: 0;
-    padding: 5px;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    overflow: auto;
-    border-radius: 20px;
-}
-
-li a {
-    font-family: Arial, Helvetica, sans-serif;
+    max-width: 180px;
     display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 25px;
+    margin: 0 auto 10px
 }
-
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-li a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-.dangerButton {
-    li a:hover {
-        background-color: red;
-        color: white;
-    }
-}
-
 
 .NavBar {
-    margin-top: 180px;
+    margin-top: 18px
+}
+
+.NavBar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.NavBar li {
+    margin: 6px 0
+}
+
+.NavBar a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.NavBar a:hover {
+    background: var(--glass);
+    color: #000
+}
+
+.NavBar a.active {
+    background: var(--accent);
+    color: white
 }
 
 footer {
-    padding-top: 420px;
-    text-align: center;
-    color: white;
-    transition-delay: 3ms;
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    color: #fff8;
+    font-size: 0.85rem;
+    text-align: center
+}
+
+.main {
+    margin-left: var(--sidebar-w);
+    padding: 36px;
+    max-width: 1100px;
 }
 
 
-/* ---------------------------------------------------------- Typewriter Effect --------------------------------------------------- */
-
-.typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid orange;
-    font-size: 3.5em;
-    white-space: nowrap;
-    /* padding-top: 10%; */
-    width: 100%;
-    animation:
-        typing 2.0s steps(40, end),
-        blink-caret .60s step-end infinite 2.0s;
+.Parent {
+    margin-left: var(--sidebar-w);
+    padding: 24px 52px;
+    max-width: 1100px;
 }
 
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: red;
-    }
-}
-
-/* ------------------------------------------------------------------ Buttons ------------------------------------------------------------------- */
-
-.ButtonsSection {
-    display: flex;
-}
-
-.emptyResumeButton {
-    width: 15%;
+.Typewriter h1 {
+    margin: 0 0 18px;
+    font-size: clamp(30px, 4.6vw, 50px);
+    letter-spacing: .16em;
+    color: transparent;
+    background: var(--accent);
+    -webkit-background-clip: text;
+    background-clip: text
 }
 
 .ResumeButton {
-    /* padding-left: 15%; */
-    /* display: flex; */
-    font-size: 1.2em;
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    text-align: center;
+    margin-bottom: 24px
 }
 
 .butt12 {
-    border-radius: 25px;
-    font-size: 1.2em;
-    font-family: 'Lato', sans-serif;
-    background-color: green;
+    background: linear-gradient(90deg, #10b981, #06b6d4);
+    border: none;
     color: white;
-    padding-inline: 30px;
-    padding-block: 5px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.15)
 }
 
-
-.ParentButton {
-    justify-items: center;
-    width: 100%;
+.butt12:hover {
+    transform: translateY(-2px)
 }
-
-.ParentButton:hover .butt13 {
-    visibility: visible;
-}
-
-.ParentButton:hover .butt12 {
-    background-color: red;
-}
-
-.ParentButton:hover .butt12::after {
-    content: "Password is Required";
-    padding-inline: 25px;
-}
-
-.butt13 {
-    width: 100%;
-    height: 5%;
-    /* margin-left: 100px; */
-    border-radius: 25px;
-    font-size: 0.9em;
-    font-family: 'Lato', sans-serif;
-    background-color: blueviolet;
-    color: white;
-    visibility: hidden;
-    padding-inline: 30px;
-    cursor: pointer;
-}
-
-/* ------------------------------------------------------------- Cards -----------------------------------------------------------------------*/
 
 .card {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 10px;
-    font-size: 2rem;
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
+    margin-bottom: 18px
 }
 
-.rightColumnEd {
-    padding-left: 400px;
-    text-align: right;
+.card table {
+    width: 100%;
+    border-collapse: collapse
 }
 
-.rightColumnEx {
-    padding-left: 75px;
-    text-align: right;
+.card tr {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    align-items: start
 }
 
-.rightColumnAd {
-    padding-left: 300px;
-    text-align: right;
+.card tr:last-child {
+    border-bottom: none
 }
 
-.rightColumnCc {
-    padding-left: 90px;
-    text-align: right;
+.card tr td {
+    padding: 0;
+    margin: 0
 }
 
-.rightColumnEdF {
-    padding-left: 400px;
-    padding-top: 25px;
-    text-align: right;
+.card tr td b {
+    font-size: 1.05rem
 }
 
-.rightColumnExF {
-    padding-left: 75px;
-    padding-top: 25px;
-    text-align: right;
+.card tr td i {
+    color: var(--muted);
+    font-style: italic
 }
 
-.rightColumnAdF {
-    padding-left: 300px;
-    padding-top: 25px;
-    text-align: right;
+.card tr td a {
+    color: #0ea5e9;
+    text-decoration: underline
 }
 
-.rightColumnCcF {
-    padding-left: 90px;
-    padding-top: 25px;
-    text-align: right;
+.firstRow td {
+    padding-top: 6px
+}
+
+.card tr .date {
+    justify-self: end;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.card tr .location {
+    justify-self: end;
+    color: var(--muted);
+    font-weight: 700
 }
 
 .ExDescription {
-    padding-top: 10px;
+    padding-top: 6px
+}
+
+.ExDescription ul {
+    margin: 6px 0 0 18px;
+    padding: 0
+}
+
+.ExDescription li {
+    margin: 6px 0;
+    color: #222
 }
 
 
-/* ------------------------------------------------------------ About ------------------------------------------------------------- */
-
-.aboutSection1 {
-    display: flex;
+td>li {
+    margin-left: 18px;
+    margin-bottom: 8px
 }
 
-.aboutText1 {
-    padding-right: 70px;
-    a {
-        text-decoration: none;
-        color: #000;
+
+@media (max-width:800px) {
+    :root {
+        --sidebar-w: 0px
+    }
+
+    .Menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        padding: 12px 16px
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px
+    }
+
+    .card tr {
+        grid-template-columns: 1fr;
+        gap: 6px
+    }
+
+    .card tr .date,
+    .card tr .location {
+        justify-self: start
+    }
+
+    .NavBar ul {
+        display: flex;
+        gap: 6px;
+        overflow: auto
+    }
+
+    .NavBar li {
+        flex: 0 0 auto
     }
 }
 
-.aboutImage {
-    width: 500px;
-    padding-inline: 100px;
-    padding-top: 40px;
-    padding-bottom: 0px;
+
+@media print {
+    body {
+        background: transparent;
+        color: #000
+    }
+
+    .Menu {
+        display: none
+    }
+
+    .main {
+        margin: 0;
+        padding: 0
+    }
+
+    .card {
+        box-shadow: none;
+        border-radius: 0;
+        background: transparent
+    }
 }
 
-/* -------------------------------------------------------------- Projects ----------------------------------------------------------------*/
+
+.card tr b {
+    display: block
+}
+
+.card tr .muted {
+    color: var(--muted);
+    font-size: 0.95rem
+}
+
+
+.card tr:hover {
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.03), rgba(124, 58, 237, 0.02));
+    border-radius: 8px
+}
+
+
+a:focus {
+    outline: 3px solid rgba(14, 165, 233, 0.25);
+    outline-offset: 2px
+}
+
+.aboutImage img {
+    width: 200px;
+    border-radius: 12px;
+    margin-bottom: 18px
+}
 
 .projectCard {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 15px;
-    padding: 20px;
-    margin-bottom: 30px;
-    font-size: 2rem;
-    width: 58vw;
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(2, 6, 23, 0.08);
+    margin-bottom: 18px
+}
+
+.projectCardInfo {
+    padding-left: 12px;
 }

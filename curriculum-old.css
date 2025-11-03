@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+/* --------------------------------------------- Body, Text, and Background Settigns --------------------------------------------------- */
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: radial-gradient(circle, rgba(211, 3, 3) 0%, rgba(42, 78, 222) 33%, rgba(235, 247, 13) 66%, rgb(28, 95, 241) 100%);
+    background-size: 2000% 2000%;
+    animation: color 20s ease-in-out infinite;
+    margin: 0%;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    background: linear-gradient(179deg, red, white);
+    color: transparent;
+    text-align: left;
+    letter-spacing: .20em;
+    background-clip: inherit;
+    -webkit-background-clip: text;
+}
+
+table {
+    font-size: 1.2rem;
+}
+
+
+/* ---------------------------------------------------------- Maintenance Header ---------------------------------------------------*/
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    z-index: 1000;
+    padding-left: 20px;
+    padding-block: 1px;
+}
+
+
+/* ----------------------------------------------------- Parent & Main Body --------------------------------------------------------- */
+
+.Parent {
+    margin-top: 0%;
+    margin-left: 26%;
+    width: inherit;
+    display: inline-block;
+}
+
+.MainBody {
+    width: 100%;
+    height: 100%;
+    /* margin-top: 5%; */
+    font-size: 1.8em;
+}
+
+
+/* ------------------------------------------------------------------- Menu ---------------------------------------------------------- */
+
+
+.Menu {
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: #554;
+    padding: 1%;
+    padding-right: 25px;
+}
+
+
+/* ------------------------------------------------------------- Logo ------------------------------------------------------------------- */
+
+.Logo {
+    position: fixed;
+    width: 15.6%;
+    padding-top: 10px;
+}
+
+img {
+    width: 100%;
+    /* height: inherit width; */
+    /* border-radius: 15px; */
+}
+
+
+/* ------------------------------------------------------------ NavBar ------------------------------------------------------------------ */
+
+.NavBar {
+    margin-top: 180px;
+
+}
+
+ul {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    overflow: auto;
+    border-radius: 20px;
+}
+
+li a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+li a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.dangerButton {
+    li a:hover {
+        background-color: red;
+        color: white;
+    }
+}
+
+
+.NavBar {
+    margin-top: 180px;
+}
+
+footer {
+    padding-top: 420px;
+    text-align: center;
+    color: white;
+    transition-delay: 3ms;
+}
+
+
+/* ---------------------------------------------------------- Typewriter Effect --------------------------------------------------- */
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    font-size: 3.5em;
+    white-space: nowrap;
+    /* padding-top: 10%; */
+    width: 100%;
+    animation:
+        typing 2.0s steps(40, end),
+        blink-caret .60s step-end infinite 2.0s;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: red;
+    }
+}
+
+/* ------------------------------------------------------------------ Buttons ------------------------------------------------------------------- */
+
+.ButtonsSection {
+    display: flex;
+}
+
+.emptyResumeButton {
+    width: 15%;
+}
+
+.ResumeButton {
+    /* padding-left: 15%; */
+    /* display: flex; */
+    font-size: 1.2em;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.butt12 {
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    background-color: green;
+    color: white;
+    padding-inline: 30px;
+    padding-block: 5px;
+    cursor: pointer;
+}
+
+
+.ParentButton {
+    justify-items: center;
+    width: 100%;
+}
+
+.ParentButton:hover .butt13 {
+    visibility: visible;
+}
+
+.ParentButton:hover .butt12 {
+    background-color: red;
+}
+
+.ParentButton:hover .butt12::after {
+    content: "Password is Required";
+    padding-inline: 25px;
+}
+
+.butt13 {
+    width: 100%;
+    height: 5%;
+    /* margin-left: 100px; */
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-family: 'Lato', sans-serif;
+    background-color: blueviolet;
+    color: white;
+    visibility: hidden;
+    padding-inline: 30px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------- Cards -----------------------------------------------------------------------*/
+
+.card {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.rightColumnEd {
+    padding-left: 400px;
+    text-align: right;
+}
+
+.rightColumnEx {
+    padding-left: 75px;
+    text-align: right;
+}
+
+.rightColumnAd {
+    padding-left: 300px;
+    text-align: right;
+}
+
+.rightColumnCc {
+    padding-left: 90px;
+    text-align: right;
+}
+
+.rightColumnEdF {
+    padding-left: 400px;
+    padding-top: 25px;
+    text-align: right;
+}
+
+.rightColumnExF {
+    padding-left: 75px;
+    padding-top: 25px;
+    text-align: right;
+}
+
+.rightColumnAdF {
+    padding-left: 300px;
+    padding-top: 25px;
+    text-align: right;
+}
+
+.rightColumnCcF {
+    padding-left: 90px;
+    padding-top: 25px;
+    text-align: right;
+}
+
+.ExDescription {
+    padding-top: 10px;
+}
+
+
+/* ------------------------------------------------------------ About ------------------------------------------------------------- */
+
+.aboutSection1 {
+    display: flex;
+}
+
+.aboutText1 {
+    padding-right: 70px;
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.aboutImage {
+    width: 500px;
+    padding-inline: 100px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+}
+
+/* -------------------------------------------------------------- Projects ----------------------------------------------------------------*/
+
+.projectCard {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    width: 58vw;
+}
