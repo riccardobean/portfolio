@@ -201,11 +201,12 @@ footer {
 }
 
 .ResumeButton {
-    padding-left: 15%;
+    /* padding-left: 15%; */
     /* display: flex; */
     font-size: 1.2em;
-    width: 85%;
-    justify-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .butt12 {
@@ -219,10 +220,6 @@ footer {
     cursor: pointer;
 }
 
-
-.butt12::after {
-    content: "Access my Resume in PDF";
-}
 
 .ParentButton {
     justify-items: center;
